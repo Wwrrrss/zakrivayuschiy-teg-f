@@ -13,4 +13,38 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font);
+  font-variation-settings: 'wdth' 400;
+}
+
+.header {
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+}
+
+.header-html {
+  margin-block: 100px;
+  margin-inline: auto;
+  width: var(--header-html-width);
+  height: var(--header-html-height);
+  border: 2px solid #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.title {
+  font-size: var(--title-font-size);
+}
+
+.header-text {
+  font-size: var(--header-text-size);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }

@@ -1,1 +1,9 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --main-font: 'inter-Variable', sans-serif;
+    --accent-font: 'PressStart2P-Regular', sans-serif;
+    --header-html-width: 700px;
+    --header-html-height: 368px;
+    --title-font-size: 65px;
+    --header-text-size: 23px;
+}
