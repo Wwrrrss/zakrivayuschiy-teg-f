@@ -6,4 +6,6 @@
     --header-html-height: 368px;
     --title-font-size: 65px;
     --header-text-size: 23px;
+    --content-block-width: 696px;
+    --border: 2px solid #000;
 }
