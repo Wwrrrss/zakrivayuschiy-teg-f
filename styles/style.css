@@ -14,6 +14,11 @@
   min-block-size: 100dvb;
   font-family: var(--main-font);
   font-variation-settings: 'wdth' 400;
+  font-size: 18px;
+  line-height: 21px;
+  background-image: var(--background-image);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .header {
@@ -32,10 +37,12 @@
   flex-direction: column;
   gap: 20px;
   justify-content: center;
+  background-color: #fff;
 }
 
 .title {
   font-size: var(--title-font-size);
+  line-height: 100%;
 }
 
 .header-text {
@@ -51,8 +58,9 @@
 }
 
 .card {
-  width: var(--content-block-width);
+  width: var(--card-width);
   border: var(--border);
+  background-color: #fff;
 }
 
 .card-title {
@@ -68,9 +76,15 @@
   border-bottom: var(--border);
 }
 
+.card__image {
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
 .card-lable {
   position: absolute;
-  right: 25px;                     /*переделать для 375px*/
+  right: 25px;
   top: 25px;
   font-family: var(--accent-font);
   mix-blend-mode: hard-light;
@@ -95,21 +109,27 @@
   padding: 25px;
 }
 
+.paragraf {
+  margin-bottom: 27px;
+}
+
 .buttons-container {
   display: flex;
   justify-content: end;
   gap: 12px;
 }
 
+.button {
+  border: var(--border);
+  background-color: #fff;
+}
+
 .card-icon-button {}
 
 .card__like-button {
-  border: var(--border);
   width: 130px;
   height: 38px;
   margin-top: 25px;
-  margin-right: 0;
-  background-color: transparent;
   text-transform: capitalize;
 }
 
@@ -117,12 +137,26 @@
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
+  line-height: 90%;
 }
 
 .save-button {
   margin: 50px 0 100px;
-  background-color: transparent;
+  color: #fff;
   padding: 15px 19px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.save-button-text {
+  mix-blend-mode: difference;
+}
+
+.save-svg {
+  width: 21px;
+  height: 21px;
+  mix-blend-mode: difference;
 }
 
 .dialog {
@@ -131,8 +165,8 @@
   position: fixed;
 }
 
-.dialog::backdrop {
-  background-color: #00000090;
+.dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .dialog[open] {
@@ -143,6 +177,12 @@
 
 .dialog-content {
   width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.dialog-svg {
+  max-height: 40px;
 }
 
 .dialog-text {
@@ -150,6 +190,7 @@
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
+  line-height: 150%;
 }
 
 .button-close {
@@ -160,4 +201,14 @@
   font-weight: 400;
   width: 100%;
   padding-block: 12.5px;
+}
+
+@media (width <= 375px) {
+  .save-button {
+    flex-direction: column;
+  }
+
+  .card-lable {
+    right: 13px;
+  }
 }
