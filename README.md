@@ -1,1 +1,1 @@
-https://wwrrrss.github.io/zakrivayuschiy-teg-f/
+https://github.com/Wwrrrss/zakrivayuschiy-teg-f
