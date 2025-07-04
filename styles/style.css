@@ -25,7 +25,7 @@
   text-transform: uppercase;
   margin-block: 100px;
   margin-inline: auto;
-  width: var(--header-html-width);
+  max-width: var(--header-html-width);
   height: var(--header-html-height);
   border: var(--border);
   text-align: center;
@@ -54,7 +54,7 @@
 }
 
 .card {
-  width: var(--card-width);
+  max-width: var(--card-width);
   border: var(--border);
   background-color: #fff;
 }
