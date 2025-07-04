@@ -11,8 +11,8 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font);
-  font-variation-settings: 'wdth' 400;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: 'wght' 400;
   font-size: 18px;
   line-height: 21px;
   background-image: var(--background-image);
@@ -21,11 +21,8 @@
 }
 
 .header {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   text-transform: uppercase;
-}
-
-.header-html {
   margin-block: 100px;
   margin-inline: auto;
   width: var(--header-html-width);
@@ -64,14 +61,15 @@
 
 .card-title {
   padding-left: 10px;
-  font-weight: 700;
+  font-variation-settings: 'wght' 700;
   font-size: 18px;
+  line-height: 130%;
   padding-block: 5px;
   border-bottom: var(--border);
 }
 
 .card-image-container {
-  height: 924px;
+  height: var(--card-container-height);
   position: relative;
   border-bottom: var(--border);
 }
@@ -118,7 +116,7 @@
   position: absolute;
   right: 25px;
   top: 25px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   mix-blend-mode: hard-light;
   font-size: 14px;
   text-transform: uppercase;
@@ -127,9 +125,10 @@
   0 1px #fff, 
   1px 0 #fff, 
   0 -1px #fff;
+  opacity: 0.5;
 }
 
-@supports ((text-stroke: 1px #fff;) or (-webkit-text-stroke: 1px #fff;)) {
+@supports (text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff) {
   .card-lable {
     -webkit-text-stroke: 1px #fff;
     text-stroke: 1px #fff;
@@ -141,15 +140,20 @@
   padding: 25px;
 }
 
-.paragraf {
-  margin-bottom: 27px;
+.card-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
 }
 
 .buttons-container {
   display: flex;
   justify-content: end;
   align-items: end;
-  gap: 12px;
+  gap: 3px;
 }
 
 .button {
@@ -219,7 +223,7 @@
 }
 
 .button__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 90%;
@@ -229,7 +233,7 @@
 }
 
 .save-button {
-  margin: 50px 0 100px;
+  margin-bottom: 100px;
   padding: 15px 19px;
   display: flex;
   align-items: center;
@@ -245,7 +249,7 @@
 }
 
 .dialog {
-  padding: 30px;
+  padding: 30px 42px;
   max-width: 353px;
   position: fixed;
 }
@@ -264,41 +268,57 @@ dialog::backdrop {
   width: 100%;
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .dialog-svg {
-  max-height: 40px;
+  width: 39px;
+  height: 39px;
 }
 
 .dialog-text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
   line-height: 150%;
+  width: 210px; /* что бы предотвратить уменьшение свг */
 }
 
 .button-close {
-  border: var(--border);
-  background-color: transparent;
-  font-size: 14px;
-  font-family: var(--accent-font);
-  font-weight: 400;
   width: 100%;
-  padding-block: 12.5px;
-  line-height: 90%;
+  height: 38px;
+  text-transform: uppercase;
 }
 
 .sparks {
   opacity: 0;
 }
 
-@media (width <= 375px) {
+@media (width < 376px) {
+  .card-title {
+    padding-right: 30px;
+    line-height: 120%;
+  }
+
+  .card-image-container {
+    height: 375px;
+  }
+
   .save-button {
     flex-direction: column;
   }
 
   .card-lable {
     right: 13px;
+  }
+
+  .save-svg {
+    height: 28px;
+    width: 28px;
+  }
+
+  .dialog {
+    width: 341px;
   }
 }

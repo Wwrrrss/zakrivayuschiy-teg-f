@@ -1,17 +1,14 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
-/*
-    repeating-linear-gradient(to bottom, #d3d3d3 2px, transparent 2px),
-        linear-gradient(to bottom, #e7e7e7, #1a1a1a);
-*/
 :root {
-    --main-font: 'inter-Variable', sans-serif;
-    --accent-font: 'PressStart2P-Regular', sans-serif;
+    --main-font: 'inter-Variable';
+    --accent-font: 'PressStart2P';
     --header-html-width: 700px;
     --header-html-height: 368px;
     --title-font-size: 65px;
     --header-text-size: 23px;
     --card-width: 696px;
+    --card-container-height: 696px;
     --border: 2px solid #000;
     --background-image: 
         repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
@@ -21,12 +18,13 @@
     --contour-color: #000;
 }
 
-@media (width <= 375px) {
+@media (width < 376px) {
     :root {
         --header-html-width: 100%;
         --header-html-height: 327px;
         --title-font-size: 49px;
         --header-text-size: 14px;
         --card-width: 100%;
+        --card-container-height: 375px;
     }
 }
