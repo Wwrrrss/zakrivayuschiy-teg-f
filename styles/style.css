@@ -320,6 +320,7 @@ dialog::backdrop {
   }
 
   .dialog {
+    max-width: none; /* предотвращает неккореткное отображение элементов */
     width: 341px;
     padding-inline: 42px;
   }
