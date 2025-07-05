@@ -281,8 +281,9 @@ dialog::backdrop {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
-  line-height: 150%;
-  width: 200px; /* что бы предотвратить уменьшение свг */
+  line-height: 140%;
+  letter-spacing: 0%;
+  width: 210px; /* что бы предотвратить уменьшение свг */
 }
 
 .button-close {
@@ -320,9 +321,6 @@ dialog::backdrop {
 
   .dialog {
     width: 341px;
-  }
-
-  .dialog-content {
-    height: 63px;
+    padding-inline: 42px;
   }
 }
