@@ -4,7 +4,7 @@
     --main-font: 'inter-Variable';
     --accent-font: 'PressStart2P';
     --header-html-width: 700px;
-    --header-html-height: 368px;
+    --header-padding: 128px;
     --title-font-size: 65px;
     --header-text-size: 23px;
     --card-width: 696px;
@@ -21,7 +21,7 @@
 @media (width < 376px) {
     :root {
         --header-html-width: 100%;
-        --header-html-height: 327px;
+        --header-padding: 120px;
         --title-font-size: 49px;
         --header-text-size: 14px;
         --card-width: 100%;
