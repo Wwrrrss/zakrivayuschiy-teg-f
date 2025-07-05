@@ -321,4 +321,8 @@ dialog::backdrop {
   .dialog {
     width: 341px;
   }
+
+  .dialog-content {
+    height: 63px;
+  }
 }
